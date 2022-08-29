@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<style>
+    form {
+        text-align: right;
+    }
+
+    #munaa {
+        text-align: right;
+    }
+    input{
+        text-align:right
+
+    }
+</style>
+
+<body class="bg-danger">
+
+    <div class="container bg-dark mt-5 " style="width: 430px; height: 520px; border-radius: 21px;">
+
+        <form id="munaa">
+
+            <input placeholder="0" id="result" class="mt-4 "
+                style="width: 399px; height: 90px; border-radius: 16px; font-size: 50px;">
+
+        </form>
+
+
+        <div class="row">
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-dark h2 text-white" style="border-radius: 7px; width: 70px;"
+                    onclick="clearResult()">C</button>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-dark h2 text-white" style="border-radius: 7px;">M+</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-dark h2 text-white" style="width: 63px; border-radius: 7px;"
+                    onclick="getFunction('/')">/</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-dark h2 text-white " style="width: 63px;border-radius: 7px;"
+                    onclick="getFunction('*')">x</button>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('7')">7</button>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('8')">8</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('9')">9</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('-')">-</button>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('4')">4</button>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('5')">5</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('6')">6</button>
+
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 text-white" style="width: 67px; height: 48px; border-radius: 7px;"
+                    onclick="getFunction('+')">+</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-9 ">
+                <div class="row">
+                    <div class="col-md-4 mt-4">
+                        <button class="bg-secondary h2 text-white"
+                            style="width: 67px; height: 48px; border-radius: 7px;" onclick="getFunction('1')">1</button>
+
+                    </div>
+
+                    <div class="col-md-4 mt-4">
+                        <button class="bg-secondary h2 text-white"
+                            style="width: 67px; height: 48px; border-radius: 7px;" onclick="getFunction('2')">2</button>
+
+                    </div>
+                    <div class="col-md-4 mt-4">
+                        <button class="bg-secondary h2 text-white"
+                            style="width: 67px; height: 48px; border-radius: 7px;" onclick="getFunction('3')">3</button>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 mt-4">
+                        <button class="bg-secondary h2 text-white"
+                            style="width: 100%; height: 48px; border-radius: 7px;" onclick="getFunction('0')">0</button>
+
+                    </div>
+                    <div class="col-md-3 mt-4">
+                        <button class="bg-secondary h2 text-white"
+                            style="width: 67px; height: 48px; border-radius: 7px;" onclick="getFunction('.')">.</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <button class="bg-secondary h2 bg-danger text-white"
+                    style="width: 67px; height: 95%; border-radius: 7px;" onclick="getResult()">=</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+
+</html>
